@@ -1,0 +1,201 @@
+@font-face {
+    font-family: Queensides;
+    src: url('Queensides-3z7Ey.tff');
+}
+body {
+    background-color: #1A2E44; 
+    color: #F8F8F8; 
+    font-family: 'Arial', sans-serif;
+    
+    /* 1. Stack elements vertically */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+    /* 2. Center items horizontally */
+    align-items: center; 
+    
+    /* 3. Add some margin to the top/bottom of the page content */
+    padding: 50px 0; 
+    margin: 0;
+}
+
+/* 4. Remove the margin from the h1 inside the container (it's no longer inside) */
+h1 {
+    color: #F8F8F8;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    /* Removed margin-bottom: 40px; from previous setup */
+    margin-bottom: 30px; /* Add some space below the title */
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+/* --- Container for the whole app --- */
+.timer-app-container {
+    /* Spacing and shape of the box */
+    padding: 60px 40px; 
+    border-radius: 12px; 
+    
+    /* Color of the box */
+    background-color: #2C3E50; /* Slightly lighter Navy/Charcoal */
+    
+    /* The effect that makes it stand out */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); 
+    
+    /* Internal layout for stacking elements */
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+}
+
+/* --- Timer Display Style (Focus) --- */
+#timer-display {
+    /* Use a large, clean, modern font for the time */
+    font-family: 'Roboto Mono', monospace; /* Excellent readable monospace font */
+    font-size: 100px; 
+    font-weight: 300; /* Thin font weight for elegance */
+    color: #FFFFFF; /* Crisp white for maximum contrast */
+    margin-bottom: 40px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+#timer-display[contenteditable="true"] {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: 2px solid #3498DB; /* Highlight when editing */
+}
+
+/* --- Button Controls --- */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    text-transform: uppercase;
+}
+
+/* START Button (Primary Action - Vibrant Blue) */
+#start-button {
+    background-color: #3498DB; /* Primary Action Blue */
+    color: #FFFFFF;
+}
+
+#start-button:hover {
+    background-color: #5DADE2;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4);
+}
+
+/* STOP Button (Secondary Action - Muted Red/Gray) */
+#stop-button {
+    background-color: #E74C3C; /* Muted Red for stop/pause */
+    color: #FFFFFF;
+}
+#stop-button:hover {
+    background-color: #EC7063;
+}
+
+/* RESET Button (Tertiary Action - Neutral Gray) */
+#reset-button {
+    background-color: #95A5A6; /* Neutral Gray */
+    color: #1A2E44;
+}
+#reset-button:hover {
+    background-color: #B0BEC5;
+}
+
+/* Disabled state */
+#reset-button:disabled {
+    background-color: #34495E; /* Darker, inactive color */
+    color: #7F8C8D;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+#start-button:disabled {
+    background-color: #34495E; /* Darker, inactive color */
+    color: #7F8C8D;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+#stop-button:disabled {
+    background-color: #34495E; /* Darker, inactive color */
+    color: #7F8C8D;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.instructions-block {
+    /* Limit width for better readability */
+    max-width: 900px; 
+    text-align: left;
+    margin-top: 40px;
+    padding: 20px;
+    /* Optional: Slightly differentiate instructions block */
+    border-top: 1px solid #34495E;
+}
+
+.instructions-heading {
+    margin-top: 0;
+    color: #3498DB; /* Use the primary action color for the header */
+    font-size: 20px;
+}
+
+.instructions-text {
+    line-height: 1.6;
+    color: #BDC3C7; /* Slightly muted text color */
+}
+
+
+footer {
+    width: 100%; 
+    padding: 20px 0;
+    background-color: #111e2b; 
+    color: #95A5A6; 
+    font-size: 0.9em;
+    text-align: center;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+}
+
+footer a img {
+    /* Set a small, consistent size for the icon */
+    height: 24px; 
+    width: 24px;
+    
+    /* Ensure there's space between the icon and the text label (if used) */
+    margin-right: 8px; 
+    
+    /* Center the icon vertically with the text */
+    vertical-align: middle; 
+}
+
+/* Link container styling */
+footer #social-links a {
+    color: #3498DB;
+    text-decoration: none; 
+    /* Use display: flex to neatly align icon and text */
+    display: inline-flex;
+    align-items: center;
+}
+
+footer #social-links a img {
+    /* CRITICAL: Set the size to a small, professional value */
+    height: 24px; 
+    width: 24px;
+    
+    /* Spacing between the icon and the word "GitHub" */
+    margin-right: 8px; 
+}

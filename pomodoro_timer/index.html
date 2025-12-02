@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Sleek Pomodoro Timer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="github-6980894_960_720.jpg">
+</head>
+
+<body> 
+    <h1>Pomodoro timer</h1>
+    <div class="timer-app-container">
+        
+        <span id="timer-display" contenteditable="false">00:25:00</span>
+        
+        <div id="button-container"> 
+            <button id="start-button">Start</button>
+            <button id="stop-button" disabled>Stop</button>
+            <button id="reset-button" disabled>Reset</button>
+        </div>
+        
+    </div>
+    <div class='instructions-block'>
+        <h2 class="instructions-heading">Instructions:</h2>
+        <p class="instructions-text">Your Pomodoro Timer is ready for use! To begin a session, click the Start button, 
+            and to pause, click Stop; use the Reset button to revert the timer to its initial 
+            duration (e.g., 25 minutes). For full customization, ensure the timer is stopped, 
+            then click directly on the time displayed (e.g., 00:25:00); type your desired duration 
+            in the HH:MM:SS format, and press the Enter key to save the new time and prepare the 
+            timer for your next session.
+        </p>
+    </div>
+
+    <script src="timer.js"></script>
+</body>
+<footer>
+    <p>&copy; 2025 Michaela Deftereos. Minimalistic Pomodoro timer&trade;</p>
+    
+    <div id="social-links">
+        <a href="https://github.com/michaela357" target="_blank">
+            <img src="github-6980894_960_720.jpg" alt="GitHub Profile">
+            GitHub
+        </a>
+    </div>
+</footer>
+</html>
