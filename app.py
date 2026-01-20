@@ -14,9 +14,25 @@ def css():
 def js():
     return send_from_directory('.', 'timer.js')
 
+@app.route('/switchtheme.js')
+def js2():
+    return send_from_directory('.', 'switchtheme.js')
+
+@app.route('/editname.js')
+def js3():
+    return send_from_directory('.', 'editname.js')
+
 @app.route('/github-6980894_960_720.jpg')
 def github_image():
     return send_from_directory('.', 'github-6980894_960_720.jpg')
+
+@app.route('/icons8-sun-50.png')
+def sun_image():
+    return send_from_directory('.', 'icons8-sun-50.png')
+
+@app.route('/icons8-moon-and-stars-30.png')
+def moon_image():
+    return send_from_directory('.', 'icons8-moon-and-stars-30.png')
 
 
 if __name__ == '__main__':
