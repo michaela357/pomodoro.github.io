@@ -2,13 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Sleek Pomodoro Timer</title>
+    <title>Pomodoro timer</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="github-6980894_960_720.jpg">
 </head>
+<header>
+    <div id="name">
+    <p id="editable-name" name="enter your name!" contenteditable="True">{{name}}</p>
+    <button id="name-edit">✍️</button>
+    </div>
+</header>
 
-<body> 
+<body>
+    <div id="name">
+        <p id="editable-name" contenteditable="True">{{name}}</p>
+        <button id="name-edit">✍️</button>
+    </div>
+
     <h1>Pomodoro timer</h1>
+    <div id="setting-button-container"> 
+        <button id="study-button">Study</button>
+        <button id="short-break-button">Short Break</button>
+        <button id="long-break-button">Long Break</button>
+    </div>
+
     <div class="timer-app-container">
         
         <span id="timer-display" contenteditable="false">00:25:00</span>
@@ -19,6 +36,14 @@
             <button id="reset-button" disabled>Reset</button>
         </div>
         
+    </div>
+
+    <div class="theme-switch-container">
+        <label class="switch">
+            <input type="checkbox" id="toggleCheckbox" hidden>
+            <span class="slider-round"></span>
+        </label>
+        <em id="light-dark-indicator">Enable Light Mode!</em>
     </div>
     <div class='instructions-block'>
         <h2 class="instructions-heading">Instructions:</h2>
@@ -32,15 +57,18 @@
     </div>
 
     <script src="timer.js"></script>
+    <script src="switchtheme.js"></script>
+    <script src="editname.js"></script>
+
+    <footer>
+        <p>&copy; 2025 Michaela D. Minimalistic Pomodoro timer&trade;</p>
+        
+        <div id="social-links">
+            <a href="https://github.com/michaela357" target="_blank">
+                <img src="github-6980894_960_720.jpg" alt="GitHub Profile">
+                GitHub
+            </a>
+        </div>
+    </footer>
 </body>
-<footer>
-    <p>&copy; 2025 Michaela D. Minimalistic Pomodoro timer&trade;</p>
-    
-    <div id="social-links">
-        <a href="https://github.com/michaela357" target="_blank">
-            <img src="github-6980894_960_720.jpg" alt="GitHub Profile">
-            GitHub
-        </a>
-    </div>
-</footer>
 </html>
