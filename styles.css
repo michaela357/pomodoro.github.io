@@ -2,6 +2,292 @@
     font-family: Queensides;
     src: url('Queensides-3z7Ey.tff');
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Theme toggle switch styling */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+em {
+    padding: 10px;
+    vertical-align: 60%;
+}
+
+
+#name {
+    display: inline;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+}
+
+/* 1. Hide the button by default */
+#name #name-edit {
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Makes it fade in smoothly */
+  }
+  
+  /* 2. Show the button when the CONTAINER is hovered */
+#name:hover #name-edit {
+    opacity: 1;
+}
+
+#name-edit{
+    color: green
+}
+
+
+
+
+
+
+
+
+
+
+
+.dark-mode{
+    background-color: white;
+    color: #072c4a;
+}
+
+body.dark-mode h1 { 
+    color: black; /* Change H1 text to light color */
+    border-bottom: 2px solid #555; /* Change border to a darker color */
+}
+  
+/* ... and you would do the same for other specific elements ... */
+  
+body.dark-mode p {
+    color: black; /* Slightly darker white for paragraphs */
+}
+  
+body.dark-mode a {
+    color: #88c0d0; /* A contrasting link color */
+}
+
+body.dark-mode .timer-app-container {
+    /* Spacing and shape of the box */
+    padding: 60px 40px; 
+    border-radius: 12px; 
+    
+    /* Color of the box */
+    background-color: #e6f4ff;
+    
+    /* The effect that makes it stand out */
+    box-shadow: 0 10px 30px rgba(111, 109, 109, 0.809); 
+    
+    /* Internal layout for stacking elements */
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+}
+
+/* --- Timer Display Style (Focus) --- */
+body.dark-mode #timer-display {
+    /* Use a large, clean, modern font for the time */
+    font-family: 'Roboto Mono', monospace; /* Excellent readable monospace font */
+    font-size: 100px; 
+    font-weight: 300; /* Thin font weight for elegance */
+
+    color: #1F4478;
+    margin-bottom: 40px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+body.dark-mode #timer-display[contenteditable="true"] {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: 2px solid #3498DB; /* Highlight when editing */
+}
+
+#editable-name[contenteditable="true"] {
+    color: green;
+}
+
+/* --- Button Controls --- */
+body.dark-mode .button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+body.dark-mode button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    text-transform: uppercase;
+}
+
+/* START Button (Primary Action - Vibrant Blue) */
+body.dark-mode #start-button {
+    background-color: #DA5F4B;
+    color: #FFFFFF;
+}
+
+body.dark-mode #start-button:hover {
+    background-color: #F3735D;
+    box-shadow: 0 4px 15px rgba(228, 89, 89, 0.762);
+}
+
+/* STOP Button (Secondary Action - Muted Red/Gray) */
+body.dark-mode #stop-button {
+    background-color: #99d6ea; /* Muted Red for stop/pause */
+    color: #35383c;
+}
+body.dark-mode #stop-button:hover {
+    background-color: #98e0ec;
+    box-shadow: 0 4px 15px rgba(84, 197, 200, 0.762);
+}
+
+/* RESET Button (Tertiary Action - Neutral Gray) */
+body.dark-mode #reset-button {
+    background-color: #d1d8d8ee; /* Neutral Gray */
+    color: #1A2E44;
+}
+
+body.dark-mode #reset-button:hover {
+    background-color: #eef1f3;
+        box-shadow: 0 4px 15px rgba(211, 219, 224, 0.762);
+}
+
+/* Disabled state */
+body.dark-mode #reset-button:disabled {
+    background-color: #34495E; /* Darker, inactive color */
+    color: #7F8C8D;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+body.dark-mode #start-button:disabled {
+    background-color: #34495E; /* Darker, inactive color */
+    color: #7F8C8D;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+body.dark-mode #stop-button:disabled {
+    background-color: #34495E; /* Darker, inactive color */
+    color: #7F8C8D;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+body.dark-mode .instructions-block {
+    /* Limit width for better readability */
+    max-width: 900px; 
+    text-align: left;
+    margin-top: 40px;
+    padding: 20px;
+    /* Optional: Slightly differentiate instructions block */
+    border-top: 1px solid #34495E;
+}
+
+body.dark-mode .instructions-heading {
+    margin-top: 0;
+    color: #3498DB; /* Use the primary action color for the header */
+    font-size: 20px;
+}a
+
+body.dark-mode .instructions-text {
+    line-height: 1.6;
+    color: #BDC3C7; /* Slightly muted text color */
+}
+
+
+body.dark-mode p {
+    width: 100%; 
+    color: #95A5A6;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.theme-switch-container {
+    padding: 30px;
+}
+
+.slider-round {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e9e9e9;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider-round:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #072c4a;
+    -webkit-transition: .4s;
+    transition: .4s;
+    background-image: url('icons8-moon-and-stars-30.png');
+    background-size: cover;
+}
+  
+
+input:checked + .slider-round {
+    background-color: #072c4a;
+}
+  
+input:focus + .slider-round {
+    box-shadow: 0 0 1px #072c4a;
+}
+  
+input:checked + .slider-round:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-color: white;
+    background-image: url('icons8-sun-50.png');
+}
+  
+  /* Rounded sliders */
+.slider-round {
+    border-radius: 34px;
+}
+
+.slider-round:before {
+    border-radius: 50%;
+}
+
 body {
     background-color: #1A2E44; 
     color: #F8F8F8; 
@@ -18,13 +304,13 @@ body {
     /* 3. Add some margin to the top/bottom of the page content */
     padding: 50px 0; 
     margin: 0;
+    transition: background-color 0.5s, color 0.5s;
 }
 
 /* 4. Remove the margin from the h1 inside the container (it's no longer inside) */
 h1 {
     color: #F8F8F8;
     font-family: 'Helvetica Neue', Arial, sans-serif;
-    /* Removed margin-bottom: 40px; from previous setup */
     margin-bottom: 30px; /* Add some space below the title */
     font-size: 36px;
     letter-spacing: 2px;
