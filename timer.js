@@ -4,12 +4,13 @@ const POMODORO_DURATION_MS = 25 * 60 * 1000;
 let remainingTimeMs = POMODORO_DURATION_MS;
 let isRunning = false;
 let lastUpdateTime = 0; // To track time elapsed while paused
+let studyTimesCompleted = 0; // to track how many times studied
 
 const display = document.getElementById('timer-display');
 const timer_duration = document.getElementById('duration')
 const startButton = document.getElementById('start-button');
-const stopButton = document.getElementById('stop-button')
-const resetButton = document.getElementById('reset-button');
+const stopButton = document.getElementById('stop-button');
+const resetButton = document.getElementById('reset-button')
 const ENTER_KEY_CODE = 13;
 
 // Function to format the time (e.g., 01:30:05)
@@ -30,9 +31,9 @@ function updateTimer() {
     const now = Date.now();
     // Calculate the time passed since the last update/start
     const timePassed = now - lastUpdateTime; 
-    lastUpdateTime = now; 
-
+    lastUpdateTime = now;
     remainingTimeMs -= timePassed;
+    document.title = formatTime(remainingTimeMs)
     
     // Stop the timer when the time runs out
     if (remainingTimeMs <= 0) {
@@ -41,7 +42,9 @@ function updateTimer() {
         isRunning = false;
         startButton.disabled = false;
         stopButton.disabled = true;
-        display.textContent = "00:00:00 - Time's Up!"; 
+        alert("00:00:00 - Time's Up!");
+        studyTimesCompleted += 1
+        alert(studyTimesCompleted)
         // Optional: Play a sound or trigger a notification here
         return;
     }
